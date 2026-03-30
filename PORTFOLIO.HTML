@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nimrod Aoma | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: white;
+  --accent: #38bdf8;
+}
+
+body.light {
+  --bg: #f1f5f9;
+  --card: white;
+  --text: black;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+section {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img, .gallery video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Nimrod Aoma</h1>
+<p>ICT | Networking | Cybersecurity | Developer</p>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+<br>
+<button onclick="toggleTheme()">Toggle Theme</button>
+<input type="file" id="fileInput" multiple accept="image/*,video/*" style="display:none" onchange="addMedia(event)">
+</header>
+
+<section id="about" class="fade">
+<h2>About Me</h2>
+<p>
+I am a Diploma graduate in ICT from Rift Valley Technical Training Institute with strong hands-on experience in networking, cybersecurity, and software development. 
+I have built practical skills through both academic projects and real-world fieldwork, especially in hotspot network deployment and maintenance.
+</p>
+<p>
+I am passionate about designing reliable network systems, troubleshooting connectivity issues, and developing software solutions such as my e-Tax Manager system. 
+My goal is to grow into roles such as Network Engineer, Cybersecurity Specialist, or IT Manager while continuously improving my technical and problem-solving skills.
+</p>
+</section>
+
+<section id="skills" class="fade">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card"><strong>Networking:</strong><br> Router configuration, hotspot setup, MikroTik basics, IP addressing, LAN/WAN configuration, CAT6 cabling, network troubleshooting and maintenance.</div>
+<div class="card"><strong>Cybersecurity:</strong><br> Knowledge from Cisco Cybersecurity and CompTIA certifications, basic threat awareness, securing networks and devices.</div>
+<div class="card"><strong>Programming:</strong><br> HTML, CSS, JavaScript, C, C++ with ability to build web applications and system projects.</div>
+<div class="card"><strong>Technical Support:</strong><br> Diagnosing network faults, repairing connectivity issues, customer support, system maintenance.</div>
+<div class="card"><strong>Tools & Platforms:</strong><br> MikroTik, Windows OS, basic Linux usage, Microsoft Office tools.</div>
+</div>
+</section>
+
+<section id="experience" class="fade">
+<h2>Experience</h2>
+
+<div class="card">
+<h3>Network Technician (Current)</h3>
+<p>
+Working in hotspot network deployment and maintenance. Responsibilities include configuring routers, extending networks using CAT6 cables, troubleshooting downtime issues, and assisting customers in understanding and using internet services.
+</p>
+</div>
+
+<div class="card">
+<h3>Industrial Attachment - Moi Teaching and Referral Hospital (Sept–Nov 2024)</h3>
+<p>
+Gained hands-on experience in IT support, system maintenance, and networking. Assisted in troubleshooting hardware and network issues, supporting users, and maintaining system operations.
+</p>
+</div>
+
+<div class="card">
+<h3>Academic & Personal Projects</h3>
+<p>
+Developed an e-Tax Manager system for VAT tracking and automation. Participated in coding and networking-related projects during my ICT diploma training.
+</p>
+</div>
+
+</section>
+
+<section id="projects" class="fade">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card">
+<h3>e-Tax Manager</h3>
+<p>VAT tracking and automation system.</p>
+</div>
+<div class="card">
+<h3>Hotspot Deployment</h3>
+<p>Full network setup using CAT6 and routers.</p>
+</div>
+</div>
+</section>
+
+<section id="gallery" class="fade">
+<h2>Project Gallery</h2>
+<p>Upload images and videos of my real work.</p>
+<div class="gallery" id="galleryContainer"></div>
+</section>
+<div class="gallery">
+<img src="media/router1.jpg" onclick="openLightbox(this.src)">
+<img src="media/cabling.jpg" onclick="openLightbox(this.src)">
+<video src="media/setup.mp4" onclick="openLightbox(this.src)" controls></video>
+</div>
+</section>
+
+
+<section id="contact" class="fade">
+<h2>Contact</h2>
+<p>Email: nimrodaoma17@gmail.com</p>
+<p>Phone: 0711437064</p>
+<p>LinkedIn: <a href="#" target="_blank">www.linkedin.com/in/nimrod-aoma-6b24252b2</a></p>
+<p>Reddit: <a href="#" target="_blank">Weak_Rise_3159</a></p>
+<p>X (Twitter): <a href="#" target="_blank">@realsolver254</a></p>
+</section>
+
+<footer>
+<p>© 2026 Nimrod Aoma</p>
+</footer>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle('light');
+}
+
+function addMedia(event) {
+  const files = event.target.files;
+  const container = document.getElementById('galleryContainer');
+
+  for (let file of files) {
+    const url = URL.createObjectURL(file);
+
+    if (file.type.startsWith('image')) {
+      const img = document.createElement('img');
+      img.src = url;
+      container.appendChild(img);
+    } else if (file.type.startsWith('video')) {
+      const video = document.createElement('video');
+      video.src = url;
+      video.controls = true;
+      container.appendChild(video);
+    }
+  }
+}
+
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
