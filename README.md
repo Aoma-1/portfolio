@@ -14,7 +14,6 @@ Experienced in hotspot deployment, router configuration, and troubleshooting.
 ## 🛠 Skills
 
 * Networking (MikroTik, LAN/WAN, CAT6)
-* Cybersecurity (Cisco, CompTIA)
 * Programming (HTML, CSS, JavaScript, C++)
 
 ## 📸 Portfolio Website
@@ -22,6 +21,6 @@ Experienced in hotspot deployment, router configuration, and troubleshooting.
 👉 Live Site: 
 ## 📬 Contact
 
-* Email: [nimrodaoma17@gmail.com](mailto:nimrodaoma17@gmail.com)
+* Email:nimrodaoma17@gmail.com
 * Phone: 0711437064
-* LinkedIn: (add your link)
+* LinkedIn:https://www.linkedin.com/in/nimrod-aoma-6b24252b2/
